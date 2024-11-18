@@ -12,7 +12,7 @@
                 - Coupe
                 - Sedan (Rule of five)
                 - Cabrio
-                - ATV
+                - ATV (Rule of five)
                 - Motorcycle (Limited to one object from constructor)
 
 

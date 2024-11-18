@@ -74,8 +74,8 @@ int main()
         thermic_SUV = thermic_SUV_2;
         thermic_SUV.afisare();
 
-
     std::cout<<std::endl;
+
 
     /* Sedan */
     Sedan thermic_Sedan ("Mercedes", "Diesel", "Gt", 4, 370, 56217309, thermic);
@@ -90,6 +90,10 @@ int main()
         Sedan sedan_3("Kia", "Benzina", "Standard", 4, 220, 56211124, thermic);
         sedan_3 = std::move(sedan_2);
         sedan_3.afisare();
+    std::cout<<std::endl;
+    
+
+    /* ATV */
 
 
     return 0;
