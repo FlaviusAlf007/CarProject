@@ -29,5 +29,5 @@ void Motorcycle::afisare() const
               << " - Echipare: " << echipare
               << " - Combustibil: " << combustibil
               << " - VIN: " << *get_VIN()
-              << " - hp: " << get_putere() << " ]\n";
+              << " - hp: " << putere << " ]\n";
 }

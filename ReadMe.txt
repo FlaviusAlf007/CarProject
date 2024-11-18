@@ -2,11 +2,11 @@
 
 # Herarhie proiect:
 
-                -Vehicle_Utils
+                                        -Vehicle_Utils
 
-    Vehicle
-        - Engine
-            - EV
+    Vehicle (Clasa Abstracta)
+        - Engine (Interfata)
+            - EV (Engine Type)
                 - Truck
                 - SUV
                 - Coupe
@@ -14,7 +14,7 @@
                 - Cabrio
                 - ATV
                 - Motorcycle
-            - Thermic
+            - Thermic (Engine Type)
                 - Truck
                 - SUV
                 - Coupe

@@ -9,7 +9,7 @@ class Vehicle_Utils
     public:
         static void printMessage(const std::string& message);
 
-        // static void printInfoVehicle(std::string br, long vin, std::shared_ptr<Engine> eng, std::string comb);
+        static void printInfoVehicle(std::string br, long vin, std::string eng, std::string comb);
 };
 
 #endif

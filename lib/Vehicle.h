@@ -13,7 +13,6 @@ class Vehicle
 {
     private: 
         std::string brand;
-        int putere;
         std::shared_ptr<long> VIN;
         std::shared_ptr<Engine> engine;
 
@@ -21,6 +20,7 @@ class Vehicle
         std::string combustibil;
         std::string echipare;
         int tractiune;
+        int putere;
 
     public:
         Vehicle(std::string br = "None",std::string comb = "None", std::string echip = "None", 
@@ -30,11 +30,16 @@ class Vehicle
         virtual ~Vehicle();
 
         virtual void afisare() const = 0;
-        void startEngine() const; //////??????
+        void startEngine() const; 
 
         std::string get_brand() const;
-        int get_putere() const;
         std::shared_ptr<long> get_VIN() const;
+        std::shared_ptr<Engine> get_engine() const;
+
+        void set_brand(const std::string& br);
+        void set_echipare(const std::string& echip);
+        void set_vin(const std::shared_ptr<long> vin);
+        void set_engine(const std::shared_ptr<Engine> eng);
 };
 
 #endif

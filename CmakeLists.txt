@@ -13,6 +13,7 @@ set(SOURCES
     src/Vehicle.cpp
     src/Vehicle_Utils.cpp
     src/Motorcycle.cpp
+    src/SUV.cpp
 )
 
 # Add the executable

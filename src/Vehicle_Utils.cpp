@@ -6,8 +6,8 @@ void Vehicle_Utils::printMessage(const std::string& message)
 }
 
 
-// void printInfoVehicle(std::string br, long vin, std::shared_ptr<Engine> eng, std::string comb)
-// {
-//     std::cout << "\nBrand: " << br << " - VIN: " << vin
-//              << " - Engine: " << eng << " - Combustibil: " << comb << std::endl;
-// }
+void Vehicle_Utils::printInfoVehicle(std::string br, long vin, std::string eng, std::string comb)
+{
+    std::cout << "\nBrand: " << br << " - VIN: " << vin
+             << " - Engine: " << eng << " - Combustibil: " << comb << std::endl;
+}
