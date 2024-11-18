@@ -27,12 +27,33 @@ std::string Vehicle::get_brand() const
     return brand;
 }
 
-int Vehicle::get_putere() const
-{
-    return putere;
-}
-
- std::shared_ptr<long> Vehicle::get_VIN() const
+std::shared_ptr<long> Vehicle::get_VIN() const
  {
     return VIN;
  }
+
+std::shared_ptr<Engine> Vehicle::get_engine() const
+{
+    return engine;
+}
+
+
+void Vehicle::set_brand(const std::string& br)
+{
+    this->brand = br;
+}
+
+void Vehicle::set_vin(const std::shared_ptr<long> vin)
+{
+    this->VIN = vin;
+}
+
+void Vehicle::set_engine(const std::shared_ptr<Engine> eng)
+{
+    this->engine = eng;
+}
+
+void Vehicle::set_echipare(const std::string& echip)
+{
+    this->echipare = echip;
+}

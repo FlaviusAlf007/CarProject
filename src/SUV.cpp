@@ -25,7 +25,7 @@ SUV::~SUV()
 /* Copy Constructor */
 SUV::SUV(const SUV& aux): Vehicle(aux)
 {
-    std::cout<<"SUV copied from: "<< aux.get_brand() << std::endl;
+    std::cout<<"Copy Constructor - SUV copied from: "<< aux.get_brand() << std::endl;
 }
 
 
@@ -37,7 +37,9 @@ SUV & SUV::operator=(const SUV& aux)
         tractiune = aux.tractiune;
         echipare = aux.echipare;
         combustibil = aux.combustibil;
-        
+        set_brand(aux.get_brand());
+        set_vin(aux.get_VIN());
+        set_engine(aux.get_engine());
     }
     std::cout<< "SUV Copy-assigned: " << aux.get_brand() << "\n";
 
@@ -52,5 +54,5 @@ void SUV::afisare() const
               << " - Echipare: " << echipare
               << " - Combustibil: " << combustibil
               << " - VIN: " << *get_VIN()
-              << " - hp: " << get_putere() << " ]\n";
+              << " - hp: " << putere << " ]\n";
 }
