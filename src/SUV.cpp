@@ -1,23 +1,23 @@
 #include <SUV.h>
 
-bool SUV::instance = false;
+// bool SUV::instance = false;
  
 SUV::SUV(std::string br, std::string comb, std::string echip, 
                        int tr, int pr, long vin, 
                        std::shared_ptr<Engine> eng)
             : Vehicle(br, comb, echip, tr, pr, vin, eng) 
 {
-    if(instance)
-        throw std::runtime_error("\n SUV already exist! \n");
+    // if(instance)
+    //     throw std::runtime_error("\n SUV already exist! \n");
 
-    instance = true;
+    // instance = true;
 
     std::cout<<"--> Constructor SUV.\n";
 };
 
 SUV::~SUV()
 {
-    instance = false;
+    // instance = false;
     std::cout<<"--> Destructor SUV.\n";
 }
 

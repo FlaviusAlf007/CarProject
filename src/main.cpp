@@ -2,6 +2,7 @@
 #include <memory>
 #include <Motorcycle.h>
 #include <SUV.h>
+#include <Sedan.h>
 #include <EV.h>
 #include <Thermic.h>
 
@@ -57,24 +58,38 @@ int main()
     thermic_SUV.afisare();
     std::cout<<std::endl;
 
-    /* Copy Constructor */
-    SUV thermic_SUV_2 = thermic_SUV;
-    thermic_SUV_2.afisare();
+        /* Copy Constructor */
+        SUV thermic_SUV_2 = thermic_SUV;
+        thermic_SUV_2.afisare();
+        std::cout<<std::endl;
+
+        thermic_SUV_2.set_brand("BWM");
+        thermic_SUV_2.set_echipare("M");
+
+        thermic_SUV_2.afisare();
+        std::cout<<std::endl;
+
+
+        /* Copy assigment Operator */
+        thermic_SUV = thermic_SUV_2;
+        thermic_SUV.afisare();
+
+
     std::cout<<std::endl;
 
-    thermic_SUV_2.set_brand("BWM");
-    thermic_SUV_2.set_echipare("M");
-    
-    thermic_SUV_2.afisare();
+    /* Sedan */
+    Sedan thermic_Sedan ("Mercedes", "Diesel", "Gt", 4, 370, 56217309, thermic);
+    thermic_Sedan.afisare();
     std::cout<<std::endl;
 
+        /* Move constructor */
+        Sedan sedan_2(std::move(thermic_Sedan));
+        sedan_2.afisare();
 
-    /* Copy assigment Operator */
-    thermic_SUV = thermic_SUV_2;
-    thermic_SUV.afisare();
-
-
-    std::cout<<std::endl;
+        /* Move Assignment Operator */
+        Sedan sedan_3("Kia", "Benzina", "Standard", 4, 220, 56211124, thermic);
+        sedan_3 = std::move(sedan_2);
+        sedan_3.afisare();
 
 
     return 0;

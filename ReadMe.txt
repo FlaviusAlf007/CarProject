@@ -6,24 +6,14 @@
 
     Vehicle (Clasa Abstracta)
         - Engine (Interfata)
-            - EV (Engine Type)
+            - EV | Thermic (Engine Type)
                 - Truck
-                - SUV
+                - SUV (Rule of tree)
                 - Coupe
-                - Sedan
+                - Sedan (Rule of five)
                 - Cabrio
                 - ATV
-                - Motorcycle
-            - Thermic (Engine Type)
-                - Truck
-                - SUV
-                - Coupe
-                - Sedan
-                - Cabrio
-                - ATV
-                - Motorcycle
-
-
+                - Motorcycle (Limited to one object from constructor)
 
 
 
