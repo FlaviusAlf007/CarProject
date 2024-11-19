@@ -23,10 +23,10 @@ class ATV: public Vehicle
         ATV &operator=(const ATV& aux);
 
         /* Move constructor */
-        ATV(ATV&& aux) noexcept;
+        ATV(ATV&& aux);
 
         /* Move Assignment Operator */
-        ATV& operator=(ATV&& aux) noexcept;
+        ATV& operator=(ATV&& aux);
 
 
         virtual void afisare() const override;

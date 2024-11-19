@@ -3,7 +3,9 @@
 #include <Motorcycle.h>
 #include <SUV.h>
 #include <Sedan.h>
+#include <Cabrio.h>
 #include <EV.h>
+#include <ATV.h>
 #include <Thermic.h>
 
 using namespace std;
@@ -90,11 +92,42 @@ int main()
         Sedan sedan_3("Kia", "Benzina", "Standard", 4, 220, 56211124, thermic);
         sedan_3 = std::move(sedan_2);
         sedan_3.afisare();
+
     std::cout<<std::endl;
     
 
     /* ATV */
+    try
+    {
+        ATV thermic_ATV ("CF Moto", "Benzina", "750", 4, 55, 85211667, thermic);
+        thermic_ATV.afisare();
 
+        /* Move constructor */
+        ATV atv_2(std::move(thermic_ATV));
+        atv_2.afisare();
+
+        /* Move Assignment Operator */
+        ATV atv_3("Canam", "Benzina", "Outlander", 4, 70, 12345678, thermic);
+        atv_3 = std::move(atv_2);
+        atv_3.afisare();
+
+    }
+    catch(std::runtime_error &e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    std::cout<<std::endl;
+
+
+
+    /* Cabrio 
+            --> Singleton
+    */
+    auto cabrio = Cabrio::getInstance("YAMAHA", "Benzina", "SP", 2, 110, 45642354, thermic);
+    cabrio->afisare();
+
+    auto cabrio_2 = Cabrio::getInstance("Mercedes", "Diesel", "Gt", 4, 370, 56217309, thermic);
+    cabrio_2->afisare();
 
     return 0;
 }

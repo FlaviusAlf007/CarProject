@@ -33,12 +33,13 @@ ATV & ATV::operator=(const ATV& aux)
 {
     if(this != &aux)
     {
-        tractiune = aux.tractiune;
-        echipare = aux.echipare;
-        combustibil = aux.combustibil;
-        set_brand(aux.get_brand());
-        set_vin(aux.get_VIN());
-        set_engine(aux.get_engine());
+        // tractiune = aux.tractiune;
+        // echipare = aux.echipare;
+        // combustibil = aux.combustibil;
+        // set_brand(aux.get_brand());
+        // set_vin(aux.get_VIN());
+        // set_engine(aux.get_engine());
+        Vehicle::operator=(aux);
     }
     std::cout<< "ATV Copy-assigned: " << aux.get_brand() << "\n";
 
@@ -47,14 +48,14 @@ ATV & ATV::operator=(const ATV& aux)
 
 
 /* Move constructor */
-ATV::ATV(ATV&& aux) noexcept : Vehicle(std::move(aux))
+ATV::ATV(ATV&& aux)  : Vehicle(std::move(aux))
 {
     std::cout<< "Moved constructor: ATV moved from: " << aux.get_brand() << "\n";
 }
 
 
 /* Move Assignment Operator */
-ATV& ATV::operator=(ATV&& aux) noexcept
+ATV& ATV::operator=(ATV&& aux) 
 {
     if(this != &aux)
     {

@@ -34,12 +34,13 @@ SUV & SUV::operator=(const SUV& aux)
 {
     if(this != &aux)
     {
-        tractiune = aux.tractiune;
-        echipare = aux.echipare;
-        combustibil = aux.combustibil;
-        set_brand(aux.get_brand());
-        set_vin(aux.get_VIN());
-        set_engine(aux.get_engine());
+        // tractiune = aux.tractiune;
+        // echipare = aux.echipare;
+        // combustibil = aux.combustibil;
+        // set_brand(aux.get_brand());
+        // set_vin(aux.get_VIN());
+        // set_engine(aux.get_engine());
+        Vehicle::operator=(aux);
     }
     std::cout<< "SUV Copy-assigned: " << aux.get_brand() << "\n";
 
