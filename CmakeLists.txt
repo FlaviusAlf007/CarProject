@@ -17,6 +17,7 @@ set(SOURCES
     src/Sedan.cpp
     src/ATV.cpp
     src/Cabrio.cpp
+    src/Truck.cpp
 )
 
 # Add the executable

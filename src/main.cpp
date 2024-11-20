@@ -7,6 +7,7 @@
 #include <EV.h>
 #include <ATV.h>
 #include <Thermic.h>
+#include <Truck.h>
 
 using namespace std;
 
@@ -128,6 +129,21 @@ int main()
 
     auto cabrio_2 = Cabrio::getInstance("Mercedes", "Diesel", "Gt", 4, 370, 56217309, thermic);
     cabrio_2->afisare();
+    std::cout<<std::endl;
+
+
+
+    /* Truck 
+            --> Singleton
+    */
+    auto truck = Truck::getInstance("Volvo", "Diesel", "700", 4, 500, 49902354, thermic);
+    truck->afisare();
+
+    auto truck_2 = Truck::getInstance("Scania", "Diesel", "800", 4, 670, 23517309, thermic);
+    truck_2->afisare();
+    std::cout<<std::endl;
+
+
 
     return 0;
 }
