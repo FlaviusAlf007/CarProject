@@ -8,6 +8,7 @@
 #include <ATV.h>
 #include <Thermic.h>
 #include <Truck.h>
+#include <Coupe.h>
 
 using namespace std;
 

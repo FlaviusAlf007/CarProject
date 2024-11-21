@@ -9,7 +9,7 @@
             - EV | Thermic (Engine Type)
                 - Truck (Singleton && Rule of five)
                 - SUV (Rule of tree)
-                - Coupe ()
+                - Coupe (Singleton && Rule of five)
                 - Sedan (Rule of five)
                 - Cabrio (Singleton && Rule of tree)
                 - ATV (Rule of five) (Limited to one object)
