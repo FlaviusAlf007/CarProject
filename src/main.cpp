@@ -137,10 +137,10 @@ int main()
     /* Truck 
             --> Singleton
     */
-    auto truck = Truck::getInstance("Volvo", "Diesel", "700", 4, 500, 49902354, thermic);
+    auto truck = Truck::getInstance("Volvo", "Diesel", "700", 4, 500, 49902354, "Da", thermic);
     truck->afisare();
 
-    auto truck_2 = Truck::getInstance("Scania", "Diesel", "800", 4, 670, 23517309, thermic);
+    auto truck_2 = Truck::getInstance("Scania", "Diesel", "800", 4, 670, 23517309,  "Nu", thermic);
     truck_2->afisare();
     std::cout<<std::endl;
 

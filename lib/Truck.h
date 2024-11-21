@@ -6,11 +6,12 @@
 class Truck: public Vehicle
 {
     private:
+        std::string remorca;
         static std::shared_ptr<Truck> instance;
 
         Truck(const std::string br = "None", const std::string comb = "None", const std::string echip = "None", 
                 const int tr = 0, const int pr = 0, const long vin = 0, 
-                const std::shared_ptr<Engine> eng = nullptr);
+                const std::shared_ptr<Engine> eng = nullptr, const std::string remorca = "None");
 
     public:
 
@@ -30,8 +31,12 @@ class Truck: public Vehicle
         Truck& operator=(Truck&& aux) = delete;
 
         static std::shared_ptr<Truck> getInstance(const std::string br, const std::string comb, const std::string echip, 
-                                                   const int tr, const int pr, const long vin, const std::shared_ptr<Engine> eng);
+                                                   const int tr, const int pr, const long vin, const std::string remorca,
+                                                   const std::shared_ptr<Engine> eng);
 
+        
+        std::string get_remorca() const;
+        void set_remorca(const std::string&);
         virtual void afisare() const override;
 };
 
